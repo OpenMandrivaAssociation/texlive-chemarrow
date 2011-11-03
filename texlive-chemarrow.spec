@@ -1,3 +1,9 @@
+# revision 17146
+# category Package
+# catalog-ctan /macros/latex/contrib/chemarrow
+# catalog-date 2010-02-21 18:58:04 +0100
+# catalog-license pd
+# catalog-version 0.9
 Name:		texlive-chemarrow
 Version:	0.9
 Release:	1
@@ -58,6 +64,7 @@ like those in chemistry text-books than do Knuth's originals.
 #- source
 %doc %{_texmfdistdir}/source/fonts/chemarrow/Arrow.vfb
 %doc %{_texmfdistdir}/source/fonts/chemarrow/arrow.mp
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,3 +75,5 @@ like those in chemistry text-books than do Knuth's originals.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
