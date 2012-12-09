@@ -64,3 +64,18 @@ like those in chemistry text-books than do Knuth's originals.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.9-2
++ Revision: 750105
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.9-1
++ Revision: 718037
+- texlive-chemarrow
+- texlive-chemarrow
+- texlive-chemarrow
+- texlive-chemarrow
+- texlive-chemarrow
+
