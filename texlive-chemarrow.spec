@@ -1,19 +1,13 @@
-# revision 17146
-# category Package
-# catalog-ctan /macros/latex/contrib/chemarrow
-# catalog-date 2010-02-21 18:58:04 +0100
-# catalog-license pd
-# catalog-version 0.9
 Name:		texlive-chemarrow
-Version:	0.9
-Release:	11
+Version:	17146
+Release:	1
 Summary:	Arrows for use in chemistry
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chemarrow
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemarrow.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemarrow.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemarrow.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemarrow.r17146.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemarrow.doc.r17146.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chemarrow.source.r17146.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ to use it. The arrows in the font are designed to look more
 like those in chemistry text-books than do Knuth's originals.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -57,25 +51,11 @@ like those in chemistry text-books than do Knuth's originals.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.9-2
-+ Revision: 750105
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.9-1
-+ Revision: 718037
-- texlive-chemarrow
-- texlive-chemarrow
-- texlive-chemarrow
-- texlive-chemarrow
-- texlive-chemarrow
-
