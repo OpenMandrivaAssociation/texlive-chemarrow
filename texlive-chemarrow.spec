@@ -1,6 +1,6 @@
 Name:		texlive-chemarrow
 Version:	17146
-Release:	1
+Release:	2
 Summary:	Arrows for use in chemistry
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chemarrow
